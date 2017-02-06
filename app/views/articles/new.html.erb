@@ -41,8 +41,11 @@
     </article>
 <% end %>
 
-<div class = 'links'>
-  <%= link_to 'Show all Articles', articles_path %>
+<br>
+<br>
+<div class = 'button'>
+  <%= button_to "Show all Articles", articles_path, :method => "get" %>
   <br>
-  <%= link_to 'Home', welcome_hey_path %>
+  <br>
+  <%= button_to "Home", welcome_hey_path, :method => "get" %>
 </div>

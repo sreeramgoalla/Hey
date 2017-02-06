@@ -3,6 +3,7 @@ h1 {
   color: #4540F7;
   font-weight: bold;
   font-family: Verdana;
+  font-size: 40px;
 }
 
 h3 {
@@ -24,6 +25,11 @@ body {
   line-height: 18px;
 }
 
-.links {
-    text-align: center;
+.button {
+  color: #444;
+  display: block;
+  text-align: center;
+  font: normal 12px arial, sans-serif;
+  height: 24px;
+  text-decoration: none;
 }
