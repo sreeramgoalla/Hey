@@ -14,3 +14,13 @@
   <strong>Text:</strong>
   <%= @article.article_text %>
 </p>
+
+<br>
+<br>
+
+<div class='button'>
+  <%= button_to "Show All Articles", articles_path, :method => "get" %>
+  <br>
+  <br>
+  <%= button_to "Home", welcome_hey_path, :method => "get" %>
+</div>

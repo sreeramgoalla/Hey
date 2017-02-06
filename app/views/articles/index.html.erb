@@ -26,8 +26,9 @@
 <br>
 <br>
 
-<div class = 'links'>
-  <%= link_to 'Create New Article', new_article_path %>
+<div class = 'button'>
+  <%= button_to "New Article", new_article_path, :method => "get" %>
   <br>
-  <%= link_to 'Home', welcome_hey_path %>
+  <br>
+  <%= button_to "Home", welcome_hey_path, :method => "get" %>
 </div>
