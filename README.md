@@ -1,2 +1,2 @@
 # Rubyists-United
-A brand new repository for all the Ruby on Rails enthusiats at JobReady (Rubyists United)
+Hey - It's an Awesome, Fantastic and an Amazing Blogging Service (Coming Soon)
