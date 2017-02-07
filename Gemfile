@@ -23,6 +23,12 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+#To use Haml with Rails, simply add Haml to your Gemfile and run bundle
+gem 'haml'
+
+#If you'd like to replace Rails's Erb-based generators with Haml, add haml-rails to your Gemfile as well.
+gem "haml-rails", "~> 0.9"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -44,4 +50,3 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
