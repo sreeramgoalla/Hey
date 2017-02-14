@@ -51,6 +51,11 @@ git push -u origin master
 # Pushes the changes in your local repository up to the remote repository you specified as the origin
 ```
 
+NOTE: if you get a conflict message .. you may need to pull down the remote master and merge with the local one
+```bash
+git pull https://github.com/YOUREPONAME.git master
+```
+
 ## 2. Development Workflow
 
 Checkout `master` and update it.
