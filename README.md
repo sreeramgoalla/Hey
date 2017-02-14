@@ -1,36 +1,7 @@
 # Hey Blog
 Hey - It's an Awesome, Fantastic and an Amazing Blogging Service (Coming Soon)
 
-## Development Workflow
-
-Checkout `master` and update it.
-
-```bash
-git checkout 'master'
-git pull
-```
-
-Create a `new feature` branch
-
-```bash
-# -b is the command that will create the branch
-git checkout -b 'my-branch-name'
-```
-
-`Commit` all your changes
-
-```bash
-git add .
-git commit -m 'Add your commit message'
-```
-
-Push all you changes to `GitHub`
-
-```bash
-git push origin 'my-branch-name'
-```
-
-## Pushing your `code` to GitHub like a King !
+## 1. Pushing your `code` to GitHub like a King !
 Putting your existing work from on GitHub can let you share and collaborate in lots of great ways
 
 Step 1: Create a new `Remote Repository` on GitHub
@@ -80,9 +51,38 @@ git push -u origin master
 # Pushes the changes in your local repository up to the remote repository you specified as the origin
 ```
 
-Go to GitHub and create a Pull Request (PR) for review. Once your PR is reviewed, merge ur `branch` into the `master` branch.
+## 2. Development Workflow
 
-## Installing the Haml Gem
+Checkout `master` and update it.
+
+```bash
+git checkout 'master'
+git pull
+```
+
+Create a `new feature` branch
+
+```bash
+# -b is the command that will create the branch
+git checkout -b 'my-branch-name'
+```
+
+`Commit` all your changes
+
+```bash
+git add .
+git commit -m 'Add your commit message'
+```
+
+Push all you changes to `GitHub`
+
+```bash
+git push origin 'my-branch-name'
+```
+
+Go to GitHub and create a `Pull Request (PR)` for review. Once your PR is reviewed, merge ur `branch` into the `master` branch.
+
+## 3. Installing the `Haml` Gem
 
 To use `Haml` in our project, simply add `Haml` to your Gemfile and run `bundle` or `bundle install` on the terminal
 
@@ -90,7 +90,7 @@ To use `Haml` in our project, simply add `Haml` to your Gemfile and run `bundle`
 gem 'haml'
 ```
 
-## Converting HTML (.erb) files to Haml files
+## 4. Converting HTML (.erb) files to Haml files
 
 To replace Rails's `Erb-based` generators with `Haml`, add `haml-rails` to your Gemfile as well.
 
