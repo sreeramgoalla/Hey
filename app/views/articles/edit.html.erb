@@ -1,4 +1,12 @@
-<h1>Editing article</h1>
+<h1>Hey !</h1>
+<h3>An Awesome, Fantastic and an Amazing Blogging Service (Coming Soon)</h3>
+<p>Created by - Ram</p>
+
+<br>
+<br>
+<br>
+
+<h1>Edit you Tweet</h1>
 
 <%= form_for :article, url: article_path(@article), method: :patch do |f| %>
 
@@ -17,13 +25,13 @@
   <% end %>
 
   <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.label :article_title %><br>
+    <%= f.text_field :article_title %>
   </p>
 
   <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
+    <%= f.label :article_text %><br>
+    <%= f.text_area :article_text %>
   </p>
 
   <p>
@@ -32,4 +40,6 @@
 
 <% end %>
 
-<%= link_to 'Back', articles_path %>
+<div class="button">
+  <%= button_to 'Back', articles_path, :method => "get" %>
+</div>
