@@ -1,33 +1,32 @@
 <h1>Hey !</h1>
 <h3>An Awesome, Fantastic and an Amazing Blogging Service (Coming Soon)</h3>
-<p>Created by - Ram</p>
+<p>Created by - Sreeram</p>
 
 <br>
-<br>
-<br>
 
-<h1>Listing all Articles</h1>
+<h1>Listing all you Tweets</h1>
 
 <table class='center'>
   <tr>
     <th>Title</th>
-    <th>Text</th>
+    <th>Tweet</th>
+    <th colspan="2">Actions</th>
   </tr>
 
   <% @articles.each do |article| %>
     <tr>
       <td><%= article.article_title %></td>
       <td><%= article.article_text %></td>
+      <td><%= link_to 'View', article_path(article) %></td>
+      <td><%= link_to 'Edit', edit_article_path(article) %></td>
     </tr>
   <% end %>
 </table>
 
 <br>
-<br>
-<br>
 
 <div class = 'button'>
-  <%= button_to "New Article", new_article_path, :method => "get" %>
+  <%= button_to "New Tweet", new_article_path, :method => "get" %>
   <br>
   <br>
   <%= button_to "Home", welcome_hey_path, :method => "get" %>

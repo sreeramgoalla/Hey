@@ -1,11 +1,14 @@
 <h1>Hey !</h1>
-<h3>An Awesome, Fantastic and an Amazing Micro Blogging Service (Coming Soon)</h3>
-<p>Created by - Sreeram</p>
+<h3>An Awesome, Fantastic and an Amazing Blogging Service (Coming Soon)</h3>
+<p>Created by - Ram</p>
+
+<br>
+<br>
 <br>
 
-<h1>Create a new Tweet</h1>
+<h1>Edit you Tweet</h1>
 
-<%= form_for :article, url: articles_path do |f| %>
+<%= form_for :article, url: article_path(@article), method: :patch do |f| %>
 
   <% if @article.errors.any? %>
     <div id="error_explanation">
@@ -35,14 +38,8 @@
     <%= f.submit %>
   </p>
 
-    </article>
 <% end %>
 
-<br>
-<br>
-<div class = 'button'>
-  <%= button_to "Show all Tweets", articles_path, :method => "get" %>
-  <br>
-  <br>
-  <%= button_to "Home", welcome_hey_path, :method => "get" %>
+<div class="button">
+  <%= button_to 'Back', articles_path, :method => "get" %>
 </div>
