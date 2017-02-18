@@ -1,0 +1,18 @@
+= render 'header'
+%br/
+%p
+  %strong Title:
+  = @article.article_title
+%p
+  %strong Text:
+  = @article.article_text
+%br/
+%br/
+.button
+  = button_to "Show all Tweets", articles_path, :method => "get"
+  %br/
+  %br/
+  = button_to "Home", welcome_hey_path, :method => "get"
+= link_to 'Edit', edit_article_path(@article)
+|
+= link_to 'Back', articles_path
