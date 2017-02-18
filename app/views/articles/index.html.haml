@@ -1,0 +1,19 @@
+= render 'header'
+%h1 Listing all you Tweets
+%table.center
+  %tr
+    %th Title
+    %th Tweet
+    %th{:colspan => "2"} Actions
+  - @articles.each do |article|
+    %tr
+      %td= article.article_title
+      %td= article.article_text
+      %td= link_to 'View', article_path(article)
+      %td= link_to 'Edit', edit_article_path(article)
+%br/
+.button
+  = button_to "New Tweet", new_article_path, :method => "get"
+  %br/
+  %br/
+  = button_to "Home", welcome_hey_path, :method => "get"
