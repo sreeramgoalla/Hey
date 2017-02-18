@@ -1,0 +1,39 @@
+/* Custom bootstrap variables must be set or imported *before* bootstrap.*/
+@import "bootstrap";
+
+.page-header {
+  margin: 10px 0px 30px;
+}
+
+body {
+  background-image: url(background.jpg);
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+h1 {
+  color: #4540F7;
+  font-weight: bold;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 40px;
+}
+
+h5 {
+  font-weight: bold;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 20px;
+}
+
+p {
+  font-weight: bold;
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+ol, ul, td {
+  text-align: center;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
