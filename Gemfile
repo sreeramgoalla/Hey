@@ -29,6 +29,12 @@ gem 'haml'
 #If you'd like to replace Rails's Erb-based generators with Haml, add haml-rails to your Gemfile as well.
 gem "haml-rails", "~> 0.9"
 
+# Bootstrap Ruby-Gem
+gem 'bootstrap', '~> 4.0.0.alpha6'
+
+# Provides Sprockets implementation for Rails 4.x (and beyond) Asset Pipeline.
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
