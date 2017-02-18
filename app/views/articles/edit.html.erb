@@ -1,44 +1,8 @@
-<h1>Hey !</h1>
-<h3>An Awesome, Fantastic and an Amazing Blogging Service (Coming Soon)</h3>
-<p>Created by - Ram</p>
-
-<br>
-<br>
-<br>
+<%= render 'header' %>
 
 <h1>Edit you Tweet</h1>
 
-<%= form_for :article, url: article_path(@article), method: :patch do |f| %>
-
-  <% if @article.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@article.errors.count, "error") %> prohibited
-        this article from being saved:
-      </h2>
-      <ul>
-        <% @article.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <p>
-    <%= f.label :article_title %><br>
-    <%= f.text_field :article_title %>
-  </p>
-
-  <p>
-    <%= f.label :article_text %><br>
-    <%= f.text_area :article_text %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
-
-<% end %>
+<%= render 'form' %>
 
 <div class="button">
   <%= button_to 'Back', articles_path, :method => "get" %>
