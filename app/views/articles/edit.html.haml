@@ -1,5 +1,11 @@
 = render 'header'
-%h1 Edit you Tweet
-= render 'form'
-.button
-  = button_to 'Back', articles_path, :method => "get"
+.body
+  .row.text-center
+    .col-md-12
+      %h3
+        Edit you Tweet
+      %br
+        = render 'form'
+  .row.text-center
+    .col-md-12
+      = link_to 'Back', articles_path, class: 'btn btn-bg btn-primary'

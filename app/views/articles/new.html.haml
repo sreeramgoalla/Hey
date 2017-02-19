@@ -1,10 +1,12 @@
 = render 'header'
-%h1 Create a new Tweet
-= render 'form'
-%br/
-%br/
-.button
-  = button_to "Show all Tweets", articles_path, :method => "get"
-  %br/
-  %br/
-  = button_to "Home", welcome_hey_path, :method => "get"
+.body
+  .row.text-center
+    .col-md-12
+      %h3
+        Create a new Tweet
+      %br
+        = render 'form'
+  .row.text-center
+    .col-md-12
+      = link_to 'Show all Tweets', articles_path, class: 'btn btn-bg btn-primary'
+      = link_to 'Home', welcome_hey_path, class: 'btn btn-bg btn-warning'

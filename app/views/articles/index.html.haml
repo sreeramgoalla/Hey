@@ -1,19 +1,32 @@
 = render 'header'
-%h1 Listing all you Tweets
-%table.center
-  %tr
-    %th Title
-    %th Tweet
-    %th{:colspan => "2"} Actions
-  - @articles.each do |article|
-    %tr
-      %td= article.article_title
-      %td= article.article_text
-      %td= link_to 'View', article_path(article)
-      %td= link_to 'Edit', edit_article_path(article)
-%br/
-.button
-  = button_to "New Tweet", new_article_path, :method => "get"
-  %br/
-  %br/
-  = button_to "Home", welcome_hey_path, :method => "get"
+.body
+  .row.text-center
+    .col-md-12
+      %h1
+        Listing all you Tweets
+  .row.text-center
+    .col-md-12
+      %table.table.table-striped
+        %thead
+          %tr
+            %th
+              Title
+            %th
+              Tweet
+            %th{:colspan => "2"}
+              Actions
+        %tbody
+          - @articles.each do |article|
+            %tr
+              %td
+                = article.article_title
+              %td
+                = article.article_text
+              %td
+                = link_to 'View', article_path(article), class: 'btn btn-sm btn-primary'
+                = link_to 'Edit', edit_article_path(article), class: 'btn btn-sm btn-warning'
+  %br
+  .row
+    .col-md-12.text-center
+      = link_to 'New Tweet', new_article_path, class: 'btn btn-bg btn-success'
+      = link_to 'Home', welcome_hey_path, class: 'btn btn-bg btn-warning'
