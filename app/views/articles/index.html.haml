@@ -25,6 +25,7 @@
               %td
                 = link_to 'View', article_path(article), class: 'btn btn-sm btn-primary'
                 = link_to 'Edit', edit_article_path(article), class: 'btn btn-sm btn-warning'
+                = link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger'
   %br
   .row
     .col-md-12.text-center
