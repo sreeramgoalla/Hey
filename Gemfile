@@ -35,6 +35,9 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 # Provides Sprockets implementation for Rails 4.x (and beyond) Asset Pipeline.
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 
+# Postgresql Gem
+gem 'pg', '~> 0.18.4'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
