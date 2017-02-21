@@ -1,38 +1,38 @@
 class ArticlesController < ApplicationController
 
 # Method used for listing all the articles created.
-  def index
-    @articles = Article.all
-  end
+def index
+  @articles = Article.all
+end
 
 # Method used for displaying individual articles.
-  def show
-    @article = Article.find(params[:id])
-  end
+def show
+  @article = Article.find(params[:id])
+end
 
 # Method used for starting a new article.
-  def new
-    @article = Article.new
-  end
+def new
+  @article = Article.new
+end
 
 # Method used for editing existing articles
-  def edit
-    @article = Article.find(params[:id])
-  end
+def edit
+  @article = Article.find(params[:id])
+end
 
 # Method used for creating articles.
-  def create
-    @article = Article.new(article_params)
+def create
+  @article = Article.new(article_params)
 
-    if @article.save
-      redirect_to @article
-    else
-      render 'new'
-    end
+  if @article.save
+    redirect_to @article
+  else
+    render 'new'
   end
+end
 
 # Method used for updating the edited articles.
-  def update
+def update
   @article = Article.find(params[:id])
 
   if @article.update(article_params)
@@ -42,9 +42,17 @@ class ArticlesController < ApplicationController
   end
 end
 
-  private
+# Method used for DELETING the articles.
+def destroy
+ @article = Article.find(params[:id])
+ @article.destroy
 
-  def article_params
-    params.require(:article).permit(:article_title, :article_text)
-  end
+ redirect_to articles_path
+end
+
+private
+
+def article_params
+  params.require(:article).permit(:article_title, :article_text)
+end
 end
