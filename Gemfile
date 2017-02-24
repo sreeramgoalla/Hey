@@ -37,6 +37,8 @@ gem 'sprockets-rails', :require => 'sprockets/railtie'
 # Postgresql Gem
 gem 'pg', '~> 0.18.4'
 
+# Selenium-webdriver Gem
+gem 'selenium-webdriver', '~> 3.2', '>= 3.2.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
