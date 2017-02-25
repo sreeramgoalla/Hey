@@ -24,21 +24,19 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #To use Haml with Rails, simply add Haml to your Gemfile and run bundle
 gem 'haml'
-
 #If you'd like to replace Rails's Erb-based generators with Haml, add haml-rails to your Gemfile as well.
 gem "haml-rails", "~> 0.9"
-
 # Bootstrap Ruby-Gem
 gem 'bootstrap', '~> 4.0.0.alpha6'
-
 # Provides Sprockets implementation for Rails 4.x (and beyond) Asset Pipeline.
 gem 'sprockets-rails', :require => 'sprockets/railtie'
-
 # Postgresql Gem
 gem 'pg', '~> 0.18.4'
-
 # Selenium-webdriver Gem
 gem 'selenium-webdriver', '~> 3.2', '>= 3.2.1'
+# Selenium chromedriver-helper
+gem "chromedriver-helper"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
