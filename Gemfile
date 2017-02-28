@@ -36,7 +36,10 @@ gem 'pg', '~> 0.18.4'
 gem 'selenium-webdriver', '~> 3.2', '>= 3.2.1'
 # Selenium chromedriver-helper
 gem "chromedriver-helper"
-
+# RSpec Gem
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
