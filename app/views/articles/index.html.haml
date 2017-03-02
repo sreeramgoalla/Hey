@@ -2,7 +2,7 @@
 .body
   .row.text-center
     .col-md-12
-      %h1
+      %h3
         Listing all you Tweets
   .row.text-center
     .col-md-12
@@ -13,8 +13,13 @@
               Title
             %th
               Tweet
+            %th
+              Created on
+            %th
+              Updated on
             %th{:colspan => "2"}
               Actions
+
         %tbody
           - @articles.each do |article|
             %tr
@@ -22,6 +27,10 @@
                 = article.article_title
               %td
                 = article.article_text
+              %td
+                = article.created_at
+              %td
+                = article.updated_at
               %td
                 = link_to 'View', article_path(article), class: 'btn btn-sm btn-primary'
                 = link_to 'Edit', edit_article_path(article), class: 'btn btn-sm btn-warning'
