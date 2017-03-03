@@ -40,6 +40,8 @@ gem "chromedriver-helper"
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
 end
+# Device Gem for user authentication
+gem 'devise'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
