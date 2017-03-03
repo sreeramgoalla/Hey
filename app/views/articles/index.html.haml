@@ -28,9 +28,9 @@
               %td
                 = article.article_text
               %td
-                = article.created_at
+                = sydney_time_zone(article.created_at)
               %td
-                = article.updated_at
+                = sydney_time_zone(article.updated_at)
               %td
                 = link_to 'View', article_path(article), class: 'btn btn-sm btn-primary'
                 = link_to 'Edit', edit_article_path(article), class: 'btn btn-sm btn-warning'
