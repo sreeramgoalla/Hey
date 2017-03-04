@@ -20,5 +20,12 @@
   %br
   .row
     .col-md-12.text-center
-      = link_to 'New Tweet', new_article_path, class: 'btn btn-bg btn-success'
-      = link_to 'Show all Tweets', articles_path, class: 'btn btn-bg btn-primary'
+      - if user_signed_in?
+        Welcome #{current_user.email}
+        = link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }
+      - else
+        = link_to 'Login', new_user_session_path
+        = link_to 'Sign Up', new_user_registration_path
+      %br
+        = link_to 'New Tweet', new_article_path, class: 'btn btn-bg btn-success'
+        = link_to 'Show all Tweets', articles_path, class: 'btn btn-bg btn-primary'
