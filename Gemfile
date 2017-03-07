@@ -36,20 +36,14 @@ gem 'pg', '~> 0.18.4'
 gem 'selenium-webdriver', '~> 3.2', '>= 3.2.1'
 # Selenium chromedriver-helper
 gem "chromedriver-helper"
-# RSpec Gem
+# RSpec & Factory Girl Gems
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
+  gem "factory_girl_rails", "~> 4.0"
 end
 # Device Gem for user authentication
 gem 'devise'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
