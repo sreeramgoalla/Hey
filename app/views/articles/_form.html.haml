@@ -4,7 +4,7 @@
       = form_for @article do |f|
         - if @article.errors.any?
           #error_explanation
-            %h2
+            %h6
               = pluralize(@article.errors.count, "error")
               prohibited
               this article from being saved:
