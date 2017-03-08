@@ -53,11 +53,18 @@ th {
 }
 
 .container-box {
-  width:300px;
-  height:280px;
-  padding:15px 10px;
-  background-color: black;
+  width:340px;
+  height:340px;
+  padding:45px 10px;
+  background: transparent;
   -webkit-box-shadow:0 0 3px #6b696b;
   -moz-box-shadow:0 0 3px #6b696b;
   box-shadow:0 0 3px #6b696b;
+}
+
+.navbar-brand {
+  height: 50px;
+  padding-top: 15px;
+  font-weight: bold;
+  font-family: verdana, arial, helvetica, sans-serif;
 }

@@ -1,33 +1,43 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = devise_error_messages!
-  .field
-    = f.label :first_name
-    %br/
-    = f.text_field :first_name, autofocus: true
-    %br/
-    = f.label :last_name
-    %br/
-    = f.text_field :last_name
-    %br/
-    = f.label :date_of_birth
-    %br/
-    = f.date_field :date_of_birth
-    %br/
-    = f.label :email
-    %br/
-    = f.email_field :email
-  .field
-    = f.label :password
-    - if @validatable
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "off"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "off"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+%br/
+%br/
+.container.container-fluid.text-center
+  %form
+    .form-group
+      %h2 Create Account
+      %h6 It's free and always will be.
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = devise_error_messages!
+        .field
+          %br/
+          = f.label :first_name
+          %br/
+          = f.text_field :first_name, autofocus: true
+          %br/
+          = f.label :last_name
+          %br/
+          = f.text_field :last_name
+          %br/
+          = f.label :date_of_birth
+          %br/
+          = f.date_field :date_of_birth
+          %br/
+          = f.label :email
+          %br/
+          = f.email_field :email
+        .field
+          = f.label :password
+          - if @validatable
+            %em
+              (#{@minimum_password_length} characters minimum)
+          %br/
+          = f.password_field :password, autocomplete: "off"
+        .field
+          = f.label :password_confirmation
+          %br/
+          = f.password_field :password_confirmation, autocomplete: "off"
+        .actions
+          %br/
+          = f.submit "Create Account", class: "btn btn-bg btn-success"
+          %br/
+          %br/
+      = render "devise/shared/links"
