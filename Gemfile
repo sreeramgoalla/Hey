@@ -38,17 +38,14 @@ gem 'selenium-webdriver', '~> 3.2', '>= 3.2.1'
 gem "chromedriver-helper"
 # RSpec & Factory Girl Gems
 group :development, :test do
+  gem 'byebug'
   gem 'rspec-rails', '~> 3.5'
   gem "factory_girl_rails", "~> 4.0"
 end
 # Device Gem for user authentication
 gem 'devise'
-
-
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-end
+# Simple Forms (Rails Forms made easy)
+gem 'simple_form'
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
