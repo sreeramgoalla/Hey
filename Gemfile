@@ -46,6 +46,8 @@ end
 gem 'devise'
 # Simple Forms (Rails Forms made easy)
 gem 'simple_form'
+# For selecting countries using Simple Forms
+gem 'country_select'
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
