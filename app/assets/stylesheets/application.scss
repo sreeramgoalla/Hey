@@ -1,12 +1,47 @@
-/* Custom bootstrap variables must be set or imported *before* bootstrap.*/
 @import "bootstrap";
 
 .page-header {
-  margin: 10px 0px 30px;
+  margin: 90px 0px 30px;
+}
+
+.header {
+  margin: 90px 0px 30px;
+}
+
+.alert {
+  margin: 60px 0px -70px;
+}
+
+.extramargin {
+  padding: 30px 0px 0px 0px;
+}
+
+.container {
+  text-align: left;
+  font-size: 15px;
+}
+
+.container-box {
+  width:350px;
+  height:390px;
+  padding:20px;
+  color: #fff;
+  background-color: rgba(5,4,2,0.6);
+  -webkit-box-shadow:0 0 3px #6b696b;
+  -moz-box-shadow:0 0 3px #6b696b;
+  box-shadow:0 0 3px #6b696b;
+}
+
+.navbar-brand {
+  height: 50px;
+  padding-top: 15px;
+  font-weight: bold;
+  font-family: verdana, arial, helvetica, sans-serif;
 }
 
 body {
-  background-image: url(background.jpg);
+  background-image: url(sydney.jpg);
+  background-size: cover;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -52,19 +87,7 @@ th {
   font-weight: bold;
 }
 
-.container-box {
-  width:340px;
-  height:340px;
-  padding:45px 10px;
-  background: transparent;
-  -webkit-box-shadow:0 0 3px #6b696b;
-  -moz-box-shadow:0 0 3px #6b696b;
-  box-shadow:0 0 3px #6b696b;
-}
-
-.navbar-brand {
-  height: 50px;
-  padding-top: 15px;
-  font-weight: bold;
-  font-family: verdana, arial, helvetica, sans-serif;
+table {
+  background-color: rgba(5,4,2,0.3);
+  color: #fff;
 }
