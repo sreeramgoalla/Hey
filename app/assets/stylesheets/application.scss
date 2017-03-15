@@ -1,5 +1,9 @@
 @import "bootstrap";
 
+.center {
+  text-align: center;
+}
+
 .page-header {
   margin: 90px 0px 30px;
 }
@@ -19,6 +23,10 @@
 .container {
   text-align: left;
   font-size: 15px;
+}
+
+.hyperlinks {
+  color: orange;
 }
 
 .container-box {

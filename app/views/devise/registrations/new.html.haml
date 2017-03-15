@@ -1,43 +1,16 @@
-%br/
-%br/
-.container.container-fluid.text-center
-  %form
-    .form-group
-      %h2 Create Account
-      %h6 It's free and always will be.
-      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-        = devise_error_messages!
-        .field
-          %br/
-          = f.label :first_name
-          %br/
-          = f.text_field :first_name, autofocus: true
-          %br/
-          = f.label :last_name
-          %br/
-          = f.text_field :last_name
-          %br/
-          = f.label :date_of_birth
-          %br/
-          = f.date_field :date_of_birth
-          %br/
-          = f.label :email
-          %br/
-          = f.email_field :email
-        .field
-          = f.label :password
-          - if @validatable
-            %em
-              (#{@minimum_password_length} characters minimum)
-          %br/
-          = f.password_field :password, autocomplete: "off"
-        .field
-          = f.label :password_confirmation
-          %br/
-          = f.password_field :password_confirmation, autocomplete: "off"
-        .actions
-          %br/
-          = f.submit "Create Account", class: "btn btn-bg btn-success"
-          %br/
-          %br/
-      = render "devise/shared/links"
+.page-header
+  %h2.text-center
+    Create an account
+  %h5.text-center It's free and always will be.
+.col-md-3.col-md-offset-3
+  = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    .form-inputs
+      = f.input :first_name, label: 'First Name', required: true, autofocus: true
+      = f.input :last_name, label: 'Last Name', required: true
+      = f.input :date_of_birth, label: 'Date of Birth', required: true
+      = f.input :email, label: 'Email', required: true
+      = f.input :password, label: 'Password', required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable)
+      = f.input :password_confirmation, label: 'Confirm Password', required: true
+    .form-actions.text-center.extramargin
+      = f.button :submit, 'Create Account', class: 'btn btn-primary'
+      = link_to 'Back', :back, class: 'btn btn-warning'
