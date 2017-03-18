@@ -1,39 +1,32 @@
-.body
-  .row.text-center
-    .col-md-12
-      %h3
-        Listing all you Tweets
-  .row.text-center
-    .col-md-12
-      %table.table.table-striped
-        %thead
-          %tr
-            %th
-              Title
-            %th
-              Tweet
-            %th
-              Created on
-            %th
-              Updated on
-            %th{:colspan => "2"}
-              Actions
-
-        %tbody
-          - @articles.each do |article|
+%body
+  .row
+    .col-md-12.text-center
+      %br/
+      %h3 Listing all you Tweets #{current_user.first_name}
+      %br/
+  .row
+    .col-md-12.text-center
+      .widget
+        %table.table.table-striped
+          %thead
             %tr
-              %td
-                = article.article_title
-              %td
-                = article.article_text
-              %td
-                = sydney_time_zone(article.created_at)
-              %td
-                = sydney_time_zone(article.updated_at)
-              %td
-                = link_to 'View', article_path(article), class: 'btn btn-sm btn-primary'
-                = link_to 'Edit', edit_article_path(article), class: 'btn btn-sm btn-warning'
-                = link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger'
+              %th Title
+              %th Tweet
+              %th Created on
+              %th Updated on
+              %th{:colspan => "2"}
+                Actions
+          %tbody
+            - @articles.each do |article|
+              %tr
+                %td= article.article_title
+                %td= article.article_text
+                %td= sydney_time_zone(article.created_at)
+                %td= sydney_time_zone(article.updated_at)
+                %td
+                  = link_to 'View', article_path(article), class: 'btn btn-sm btn-primary'
+                  = link_to 'Edit', edit_article_path(article), class: 'btn btn-sm btn-warning'
+                  = link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger'
   %br
   .row
     .col-md-12.text-center

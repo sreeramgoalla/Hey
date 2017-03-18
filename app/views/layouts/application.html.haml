@@ -8,15 +8,20 @@
     = csrf_meta_tags
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js'
   %body
-    %nav.navbar.navbar-inverse.bg-inverse
+    %nav.navbar
       .navbar-brand
         .row
-          .col-md-6
-            = link_to 'HEY !', welcome_hey_path
-          .col-md-6.text-right
+          .col-md-4.text-left
             - if user_signed_in?
-              Welcome #{current_user.first_name}
-              = link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }
+              = link_to 'My Profile', welcome_hey_path, class: 'hyperlinks'
             - else
-              = link_to 'Sign Up', new_user_registration_path
+              %h6
+                Date: #{Date.today.strftime('%d/%m/%Y')}
+          .col-md-4.text-center
+            = link_to 'HEY !', welcome_hey_path, class: 'hyperlinks'
+          .col-md-4.text-right
+            - if user_signed_in?
+              = link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }, class: 'hyperlinks'
+            - else
+              = link_to 'Sign Up', new_user_registration_path, class: 'hyperlinks'
     = yield

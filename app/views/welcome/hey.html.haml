@@ -1,18 +1,10 @@
 %br/
-.body
-  .row
-    .col-md-4
-      .navbar.navbar-default.navbar-inverse.navbar-fixed-top
-        .container-box
-    .col-md-4
-      .navbar.navbar-default.navbar-inverse.navbar-fixed-top
-        .container-box
-    .col-md-4
-      .navbar.navbar-default.navbar-inverse.navbar-fixed-top
-        .container-box
-  %br/
+%body
   .row
     .col-md-12.text-center
-      %br
-        = link_to 'New Tweet', new_article_path, class: 'btn btn-bg btn-success'
-        = link_to 'Show all Tweets', articles_path, class: 'btn btn-bg btn-primary'
+      %h3 Welcome #{current_user.first_name}
+      %br/
+  .row
+    .col-md-12.text-center
+      = link_to 'New Tweet', new_article_path, class: 'btn btn-bg btn-success'
+      = link_to 'Show all Tweets', articles_path, class: 'btn btn-bg btn-primary'

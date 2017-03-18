@@ -1,43 +1,31 @@
-%br/
-%br/
-.container.container-fluid.text-center
-  %form
-    .form-group
-      %h2 Create Account
-      %h6 It's free and always will be.
-      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-        = devise_error_messages!
-        .field
+.registration-form
+  .col-md-12
+    .header
+      .heading.text-center.text-uppercase
+        %h3 Create Account
+        %p It's free and always will be
+      %br
+    .row
+      .col-md-12
+        = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          .form-inputs
+            .row
+              .col-md-6
+                = f.input :first_name, label: 'First Name', required: true, autofocus: true, placeholder: 'First Name'
+              .col-md-6
+                = f.input :last_name, label: 'Last Name', required: true, placeholder: 'Last Name'
+            .row
+              .col-md-6
+                = f.input :date_of_birth, label: 'Date of Birth', required: true
+              .col-md-6
+                = f.input :email, label: 'Email', required: true, placeholder: 'Email Address'
+            .row
+              .col-md-6
+                = f.input :password, label: 'Password', required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable), placeholder: 'New Password'
+              .col-md-6
+                = f.input :password_confirmation, label: 'Confirm Password', required: true, placeholder: 'Confirm Password'
+          .form-actions.text-center.extramargin
+            = f.button :submit, 'Create Account', class: 'btn btn-primary'
           %br/
-          = f.label :first_name
-          %br/
-          = f.text_field :first_name, autofocus: true
-          %br/
-          = f.label :last_name
-          %br/
-          = f.text_field :last_name
-          %br/
-          = f.label :date_of_birth
-          %br/
-          = f.date_field :date_of_birth
-          %br/
-          = f.label :email
-          %br/
-          = f.email_field :email
-        .field
-          = f.label :password
-          - if @validatable
-            %em
-              (#{@minimum_password_length} characters minimum)
-          %br/
-          = f.password_field :password, autocomplete: "off"
-        .field
-          = f.label :password_confirmation
-          %br/
-          = f.password_field :password_confirmation, autocomplete: "off"
-        .actions
-          %br/
-          = f.submit "Create Account", class: "btn btn-bg btn-success"
-          %br/
-          %br/
-      = render "devise/shared/links"
+          .form-actions.text-center
+            = link_to 'Cancel', :back, class: 'btn btn-warning'

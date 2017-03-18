@@ -1,23 +1,33 @@
-.body
-  .container.text-center
-    .row
-      .col-md-12
-        = @article.article_title
-    .row
-      .col-md-12
-        = @article.article_text
-    .row
-      .col-md-12
+%body
+  .row.text-center
+    .col-md-12
+      %br/
+      %h4 Displaying your Tweet
+      %br/
+  .row.text-center
+    .col-md-12
+      .widget
+        .row.text-center
+          .col-md-12
+            = @article.article_title
+        %br/
+        .row.text-center
+          .col-md-12
+            = @article.article_text
+  .row.text-center
+    .col-md-12
+      %p
         Created on:
         = sydney_time_zone(@article.created_at)
-    .row
-      .col-md-12
+  .row.text-center
+    .col-md-12
+      %p
         Last Updated on:
         = sydney_time_zone(@article.updated_at)
 
-    %br
-    .row
-      .col-md-12.text-center
-        = link_to 'Edit', edit_article_path(@article), class: 'btn btn-bg btn-danger'
-        = link_to 'Show all Tweets', articles_path, class: 'btn btn-bg btn-primary'
-        = link_to 'Home', welcome_hey_path, class: 'btn btn-bg btn-warning'
+  %br
+  .row
+    .col-md-12.text-center
+      = link_to 'Edit', edit_article_path(@article), class: 'btn btn-bg btn-danger'
+      = link_to 'Show all Tweets', articles_path, class: 'btn btn-bg btn-primary'
+      = link_to 'Home', welcome_hey_path, class: 'btn btn-bg btn-warning'
