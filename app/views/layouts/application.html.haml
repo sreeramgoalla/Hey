@@ -13,7 +13,7 @@
         .row
           .col-md-4.text-left
             - if user_signed_in?
-              = link_to 'My Profile', welcome_hey_path, class: 'hyperlinks'
+              = link_to 'Edit Profile', edit_user_registration_path, class: 'hyperlinks'
             - else
               %h6
                 Date: #{Date.today.strftime('%d/%m/%Y')}
