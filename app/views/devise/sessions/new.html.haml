@@ -1,19 +1,16 @@
-%body
-  .row
-    .col-md-12
-      .header
-        .container.container-box
-          .heading.text-center.text-uppercase
-            Login In
-          %br/
-          %br/
-          = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-            .form-inputs
-              = f.input :email, label: 'Enter your email', required: true, autofocus: true, placeholder: 'Email'
-              = f.input :password, required: true, placeholder: 'password'
-              = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+.login-form
+  .col-md-12
+    .header
+      .heading.text-center.text-uppercase
+        %h3 Login
+      %br
+      = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .form-inputs
+          = f.input :email, required: false, autofocus: true, placeholder: 'Email Address'
+          = f.input :password, required: false, placeholder: 'Password'
+          = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
 
-            .form-actions.text-center
-              = f.button :submit, 'Log in', class: 'btn btn-success'
-              .extramargin
-                = link_to 'Forgot your password?', new_password_path(resource_name), class: 'hyperlinks'
+        .form-actions.text-center
+          = f.button :submit, 'Log in', class: 'btn btn-bg btn-success'
+          .extramargin
+            = link_to 'Forgot your password?', new_password_path(resource_name)

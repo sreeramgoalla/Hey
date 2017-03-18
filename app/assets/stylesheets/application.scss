@@ -1,7 +1,17 @@
 @import "bootstrap";
 
-.center {
-  text-align: center;
+.login-form {
+  width: 35%;
+  margin: 0 auto;
+  padding: 30px;
+  font-family: 'Helvetica Neue';
+}
+
+.registration-form {
+  width: 50%;
+  margin: 0 auto;
+  padding: 30px;
+  font-family: 'Helvetica Neue';
 }
 
 .page-header {
@@ -9,7 +19,14 @@
 }
 
 .header {
-  margin: 90px 0px 30px;
+  margin: 60px 0px 30px;
+}
+
+.heading{
+  border-bottom:1px solid #eee;
+  font-weight:bold;
+  padding:5px 0px;
+  font-size:16px;
 }
 
 .alert {
@@ -26,7 +43,7 @@
 }
 
 .hyperlinks {
-  color: orange;
+  color: white;
 }
 
 .container-box {
@@ -44,58 +61,95 @@
   height: 50px;
   padding-top: 15px;
   font-weight: bold;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'Helvetica Neue';
+}
+
+.navbar {
+  background-color: #E9573F;
 }
 
 body {
-  background-image: url(sydney.jpg);
   background-size: cover;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'Helvetica Neue';
   font-size: 13px;
   line-height: 18px;
 }
 
 h1 {
-  color: #4540F7;
+  color: #365899;
   font-weight: bold;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 40px;
+  font-family: 'Helvetica Neue';
+}
+
+h2 {
+  color: #365899;
+  font-weight: bold;
+  font-family: 'Helvetica Neue';
 }
 
 h3 {
-  color: #4540F7;
+  color: #365899;
   font-weight: bold;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 30px;
+  font-family: 'Helvetica Neue';
+}
+
+h4 {
+  color: #365899;
+  font-weight: bold;
+  font-family: 'Helvetica Neue';
 }
 
 h5 {
+  color: #365899;
   font-weight: bold;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 20px;
+  font-family: 'Helvetica Neue';
+}
+
+h6 {
+  color: white;
+  font-weight: bold;
+  font-family: 'Helvetica Neue';
 }
 
 p {
   font-weight: bold;
-  font-family: verdana, arial, helvetica, sans-serif;
+  color: black;
+  font-family: 'Helvetica Neue';
+  font-size: 12px;
 }
 
 ol, ul, td {
   text-align: center;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'Helvetica Neue';
   font-size: 13px;
   line-height: 18px;
 }
 
 th {
   text-align: center;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'Helvetica Neue';
   font-size: 13px;
   font-weight: bold;
 }
 
 table {
-  background-color: rgba(5,4,2,0.3);
-  color: #fff;
+  background-color: rgba(5,4,2,0.1);
+  color: black;
+}
+
+.widget {
+  display: inline-block;
+  color: black;
+  font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 16px;
+  border-color: #eee #ddd #bbb;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  margin: 10px 5px;
+  padding: 20px;
+  text-align: center;
 }

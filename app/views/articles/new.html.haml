@@ -1,10 +1,11 @@
-.body
-  .row.text-center
-    .col-md-12
-      %h3
-        Create a new Tweet
+%body
+  .row
+    .col-md-12.text-center
+      %br/
+      %h3 Create a new Tweet
       %br
-        = render 'form'
+        .widget
+          = render 'form'
   .row.text-center
     .col-md-12
       = link_to 'Show all Tweets', articles_path, class: 'btn btn-bg btn-primary'
