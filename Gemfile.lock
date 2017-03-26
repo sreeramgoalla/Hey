@@ -49,6 +49,10 @@ GEM
       sass (>= 3.4.19)
     builder (3.2.3)
     byebug (9.0.6)
+    carrierwave (1.0.0)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     childprocess (0.6.1)
       ffi (~> 1.0, >= 1.0.11)
     chromedriver-helper (1.0.0)
@@ -235,6 +239,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap (~> 4.0.0.alpha6)
   byebug
+  carrierwave (~> 1.0)
   chromedriver-helper
   coffee-rails (~> 4.1.0)
   country_select
