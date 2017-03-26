@@ -2,27 +2,21 @@ require 'rails_helper'
 
 RSpec.describe Article, type: :modal do
 
-  describe 'Invalid Cases for Article Title' do
-    it ' article title is not valid with less than 5 characters' do
-      articleTitle = Article.new(article_title: 'Tweet')
-      expect(articleTitle).to be_valid
+  let(:article) { Article.new(article_title: title, article_text: text) }
+
+  describe 'title' do
+    let(:title) { 'Tweet 1' }
+    let(:text) { 'This is a text field' }
+    it 'is not valid with less than 5 characters' do
+    expect(article).to be_valid
     end
   end
 
-  describe 'Valid Cases for Article Title' do
-    it 'article title is valid with more than 5 characters' do
-      articleTitle = Article.new(article_title: 'Tweet One')
-      expect(articleTitle).to be_valid
-    end
-
-    it 'article title is valid with 5 characters' do
-      articleTitle = Article.new(article_title: 'Tweet')
-      expect(articleTitle).to be_valid
-    end
-
-    it 'article title is a string' do
-      articleTitle = Article.new(article_title: 'Tweet 1')
-      expect(articleTitle).to be_valid
+  describe 'text' do
+    let(:title) { 'Tweet 1' }
+    let(:text) { 'This is a text field' }
+    it 'is a mandatory field' do
+    expect(article).to be_valid
     end
   end
 end
