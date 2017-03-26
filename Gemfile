@@ -50,6 +50,8 @@ gem 'devise'
 gem 'simple_form'
 # For selecting countries using Simple Forms
 gem 'country_select'
+# This gem provides a simple and extremely flexible way to upload files from Ruby applications
+gem 'carrierwave', '~> 1.0'
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
