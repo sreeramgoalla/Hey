@@ -29,6 +29,9 @@
             .row
               .col-md-12
                 = f.input :current_password, label: 'Enter your Current Password', placeholder: 'Enter current password to save your changes', autocomplete: 'off'
+            .row
+              .col-md-12
+                = f.input :avatar, label: 'Upload Profile Picture'
           .form-actions.text-center.extramargin
             = f.button :submit, 'Update Profile', class: 'btn btn-success'
             = link_to 'Cancel', root_path ,class: 'btn btn-primary'
