@@ -45,7 +45,7 @@ group :development, :test do
   gem 'pry-rails'
 end
 # Device Gem for user authentication
-gem 'devise'
+gem 'devise', github: 'plataformatec/devise'
 # Simple Forms (Rails Forms made easy)
 gem 'simple_form'
 # For selecting countries using Simple Forms

@@ -1,6 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe ArticlesController, type: :controller do
+describe ArticlesController do
+
+  let(:user) { create(:user)}
+
+  before do
+    sign_in user
+  end
 
   describe 'GET #show' do
     it 'assigns the requested contact to @article' do
