@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :articles
+  has_many :comments, as: :commentable
   mount_uploader :avatar, AvatarUploader
 
   devise :database_authenticatable, :registerable,
