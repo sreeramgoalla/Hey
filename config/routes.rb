@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   get 'welcome/hey'
   get 'articles/new'
 
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
 
   root 'welcome#hey'
 end
