@@ -24,6 +24,9 @@
                 = f.input :password, label: 'Password', required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable), placeholder: 'New Password'
               .col-md-6
                 = f.input :password_confirmation, label: 'Confirm Password', required: true, placeholder: 'Confirm Password'
+            .row
+              .col-md-12
+                = f.input :avatar, label: 'Upload Profile Picture'
           .form-actions.text-center.extramargin
             = f.button :submit, 'Create Account', class: 'btn btn-primary'
           %br/
