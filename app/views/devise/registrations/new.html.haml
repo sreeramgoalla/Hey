@@ -4,7 +4,6 @@
       .heading.text-center.text-uppercase
         %h3 Create Account
         %p It's free and always will be
-      %br
     .row
       .col-md-12
         = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
@@ -28,7 +27,5 @@
               .col-md-12
                 = f.input :avatar, label: 'Upload Profile Picture'
           .form-actions.text-center.extramargin
-            = f.button :submit, 'Create Account', class: 'btn btn-primary'
-          %br/
-          .form-actions.text-center
-            = link_to 'Cancel', :back, class: 'btn btn-warning'
+            = f.button :submit, 'Create Account', class: 'btn btn-success'
+            = link_to 'Cancel', :back ,class: 'btn btn-danger'
