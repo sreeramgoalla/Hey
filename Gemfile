@@ -50,6 +50,9 @@ gem 'country_select'
 gem 'carrierwave', '~> 1.0'
 # Bootstrap 3 Gem
 gem 'bootstrap-sass', '~> 3.3.6'
+# bootstrap3-datetimepicker-rails
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
