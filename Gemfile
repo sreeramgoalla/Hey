@@ -26,10 +26,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml'
 #If you'd like to replace Rails's Erb-based generators with Haml, add haml-rails to your Gemfile as well.
 gem "haml-rails", "~> 0.9"
-# Bootstrap Ruby-Gem
-gem 'bootstrap', '~> 4.0.0.alpha6'
-# Provides Sprockets implementation for Rails 4.x (and beyond) Asset Pipeline.
-gem 'sprockets-rails', :require => 'sprockets/railtie'
 # Postgresql Gem
 gem 'pg', '~> 0.18.4'
 # Selenium-webdriver Gem
@@ -52,6 +48,8 @@ gem 'simple_form'
 gem 'country_select'
 # This gem provides a simple and extremely flexible way to upload files from Ruby applications
 gem 'carrierwave', '~> 1.0'
+# Bootstrap 3 Gem
+gem 'bootstrap-sass', '~> 3.3.6'
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views

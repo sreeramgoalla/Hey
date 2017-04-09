@@ -1,8 +1,7 @@
 .registration-form
   .col-md-12
-    .header
-      .heading.text-center.text-uppercase
-        %h3 Edit your Profile
+    .heading.text-center.text-uppercase
+      %h3 Edit your Profile
     .row
       .col-md-12
         = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|

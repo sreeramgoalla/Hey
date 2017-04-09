@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Article, type: :modal do
+describe Article do
 
   let(:article) { Article.new(article_title: title, article_text: text) }
 
