@@ -1,3 +1,18 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+
+@import "bootstrap-sprockets";
 @import "bootstrap";
 
 .login-form {
@@ -10,7 +25,7 @@
 .registration-form {
   width: 50%;
   margin: 0 auto;
-  padding: 10px;
+  padding: 0px;
   font-family: 'Helvetica Neue';
 }
 
@@ -46,6 +61,10 @@
   color: white;
 }
 
+.container {
+  color: #fff;
+}
+
 .container-box {
   width:350px;
   height:390px;
@@ -57,15 +76,18 @@
   box-shadow:0 0 3px #6b696b;
 }
 
-.navbar-brand {
+.navbar-header {
   height: 50px;
-  padding-top: 15px;
   font-weight: bold;
   font-family: 'Helvetica Neue';
 }
 
 .navbar {
   background-color: #E9573F;
+}
+
+.navbar-brand {
+  color: white;
 }
 
 .footer {

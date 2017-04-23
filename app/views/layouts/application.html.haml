@@ -7,24 +7,29 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js'
+
   %body
-    %nav.navbar.navbar-static-top
-      .navbar-brand
-        .row
-          .col-md-4.text-left
-            - if user_signed_in?
-              = link_to 'Edit Profile', edit_user_registration_path, class: 'hyperlinks'
-            - else
-              %h6
-                Date: #{Date.today.strftime('%d/%m/%Y')}
-          .col-md-4.text-center
-            = link_to 'HEY !', welcome_hey_path, class: 'hyperlinks'
-          .col-md-4.text-right
-            - if user_signed_in?
-              = link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }, class: 'hyperlinks'
-            - else
-              = link_to 'Create Account', new_user_registration_path, class: 'hyperlinks'
+    .navbar.navbar-default.navbar-static-top{:role => "navigation"}
+      .navbar-header
+        %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        = link_to 'HEY !', root_path, class: 'navbar-brand'
+      .navbar-collapse.collapse
+        - if user_signed_in?
+          %ul.nav.navbar-nav.navbar-right
+            %li= link_to 'All Tweets', articles_path
+            %li= link_to 'New Tweet', new_article_path
+            %li= link_to 'My Profile', edit_user_registration_path
+            %li= link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }
+        - else
+          %ul.nav.navbar-nav.navbar-right
+            %li= link_to 'Login', new_user_session_path
+            %li= link_to 'Create Account', new_user_registration_path
     = yield
+
     .footer
       .container
         %p.text-muted
