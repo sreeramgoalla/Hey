@@ -10,8 +10,9 @@
             .row
               .col-md-12.text-center
                 - if current_user.avatar?
-                  = image_tag(current_user.avatar_url.to_s)
+                  = image_tag(current_user.avatar_url.to_s, class: 'img-responsive center-block img-rounded')
                 - else
+                .text-center
                   = f.input :avatar, label: 'Upload Profile Picture'
             .row
               .col-md-6
@@ -24,7 +25,7 @@
                 - if devise_mapping.confirmable? && resource.pending_reconfirmation?
                   %p Currently waiting confirmation for: #{resource.unconfirmed_email}
               .col-md-6
-                = f.input :date_of_birth, label: 'Date of Birth'
+                = f.input :date_of_birth, as: :date, label: 'Date of Birth'
             .row
               .col-md-6
                 = f.input :password, label: 'Change Password', placeholder: 'Change Password' ,autocomplete: 'off'
