@@ -9,7 +9,7 @@
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js'
 
   %body
-    .navbar.navbar-default.navbar-static-top{:role => "navigation"}
+    .navbar.navbar-static-top{:role => "navigation"}
       .navbar-header
         %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
           %span.sr-only Toggle navigation
@@ -26,7 +26,6 @@
             %li= link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }
         - else
           %ul.nav.navbar-nav.navbar-right
-            %li= link_to 'Login', new_user_session_path
             %li= link_to 'Create Account', new_user_registration_path
     = yield
 

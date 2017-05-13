@@ -83,11 +83,17 @@
   font-family: 'Helvetica Neue';
 }
 
+// Facebook Blue (#3B5998)
 .navbar {
   background-color: #E9573F;
+  padding-right: 10px;
 }
 
 .navbar-brand {
+  color: white;
+}
+
+.nav a {
   color: white;
 }
 
