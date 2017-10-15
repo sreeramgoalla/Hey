@@ -1,0 +1,78 @@
+<div class="registration-form">
+  <div class="col-md-12">
+    <div class="heading text-center text-uppercase">
+      <h3>Edit your Profile</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+          <%= devise_error_messages! %>
+          <div class="form-inputs">
+            <div class="row">
+              <div class="col-md-4 text-center">
+                <% if current_user.avatar? %>
+                  <%= image_tag(current_user.avatar_url.to_s, class: 'img-responsive center-block img-rounded') %>
+                <% else %>
+                <% end %>
+                <div class="text-center">
+                  <%= f.input :avatar, label: 'Upload Profile Picture' %>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <%= f.input :first_name, label: 'First Name', autofocus: true %>
+              </div>
+              <div class="col-md-6">
+                <%= f.input :last_name, label: 'Last Name' %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <%= f.input :email, label: 'Current Email' %>
+                <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                  <p>Currently waiting confirmation for: #{resource.unconfirmed_email}</p>
+                <% end %>
+              </div>
+              <div class="col-md-6">
+                <%= f.input :date_of_birth, as: :date, label: 'Date of Birth' %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <%= f.input :password, label: 'Change Password', placeholder: 'Change Password' ,autocomplete: 'off' %>
+              </div>
+              <div class="col-md-6">
+                <%= f.input :password_confirmation, label: 'Confirm New Password', placeholder: 'Confirm' ,autocomplete: 'off' %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <%= f.input :current_password, label: 'Enter your Current Password', placeholder: 'Enter current password to save your changes', autocomplete: 'off' %>
+              </div>
+            </div>
+          </div>
+          <div class="form-actions text-center extramargin">
+            <%= f.button :submit, 'Update Profile', class: 'btn btn-success' %>
+            <%= link_to 'Cancel', root_path ,class: 'btn btn-primary' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="registration-form">
+  <div class="col-md-12">
+    <div class="header">
+      <div class="heading text-center text-uppercase">
+        <h3>Delete your Profile</h3>
+        <p>Not Happy ?</p>
+      </div>
+      <br>
+        <div class="form-actions text-center extramargin">
+          <%= link_to 'Delete Account', registration_path(resource_name), data: { confirm: "Are you sure?" }, class: 'btn btn-danger', method: :delete %>
+        </div>
+      </br>
+    </div>
+  </div>
+</div>
