@@ -80,21 +80,37 @@
 .navbar-header {
   height: 50px;
   font-weight: bold;
-  font-family: 'Helvetica Neue';
+  font-family: 'Arial';
 }
 
+// Hey Actual Colour (#E9573F)
 // Facebook Blue (#3B5998)
 .navbar {
-  background-color: #E9573F;
+  background-color: #283e4a;
   padding-right: 10px;
 }
 
 .navbar-brand {
-  color: white;
+  color: #ff9c3c;
+  font-size: 45px;
+}
+
+a:hover {
+  color: black;
+}
+
+a.navbar-brand:hover {
+  color: #ff9c3c;
+  border: 1px solid #283e4a;
 }
 
 .nav a {
   color: white;
+}
+
+.nav a:hover {
+  color: black;
+  background-color: black;
 }
 
 .footer {
@@ -129,6 +145,7 @@ body {
   font-family: 'Helvetica Neue';
   font-size: 13px;
   line-height: 18px;
+  background-color: #f6f7f9;
 }
 
 h1 {
