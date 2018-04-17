@@ -1,7 +1,7 @@
 # Hey Blog
 Hey - It's an Awesome, Fantastic and an Amazing Blogging Service (Coming Soon)
 
-![Hey Image !](/app/assets/images/hey.png?raw=true "HEY !")
+![Hey Image !](/app/assets/images/hey_readme.png?raw=true "HeY !")
 
 ## 1. Pushing your `code` to GitHub like a King !
 Putting your existing work from on GitHub can let you share and collaborate in lots of great ways
