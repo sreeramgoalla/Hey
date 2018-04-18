@@ -1,7 +1,7 @@
 class ProfileController < ApplicationController
   def show
     if valid_page?
-      render template: "profile/#{params[:profile]}"
+      render template: "profile/#{params[:show]}"
     else
       render file: "public/404.html", status: :not_found
     end
@@ -10,6 +10,6 @@ class ProfileController < ApplicationController
   private
 
   def valid_page?
-    File.exist?(Pathname.new(Rails.root + "app/views/profile/#{params[:profile]}.html.haml"))
+    File.exist?(Pathname.new(Rails.root + "app/views/profile/#{params[:show]}.html.haml"))
   end
 end
