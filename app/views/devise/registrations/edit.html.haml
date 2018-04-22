@@ -1,0 +1,48 @@
+.registration-form
+  .col-md-12
+    .heading.text-center.text-uppercase
+      %h3 Edit your Profile
+    .row
+      .col-md-12
+        = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+          = devise_error_messages!
+          .form-inputs
+            .row
+              .col-md-4.text-center
+                - if current_user.avatar?
+                  = image_tag(current_user.avatar_url.to_s, class: 'img-responsive center-block img-rounded')
+                - else
+                .text-center
+                  = f.input :avatar, label: 'Upload Profile Picture'
+            .row
+              .col-md-6
+                = f.input :first_name, label: 'First Name', autofocus: true
+              .col-md-6
+                = f.input :last_name, label: 'Last Name'
+            .row
+              .col-md-6
+                = f.input :email, label: 'Current Email'
+                - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+                  %p Currently waiting confirmation for: \#{resource.unconfirmed_email}
+              .col-md-6
+                = f.input :date_of_birth, as: :date, label: 'Date of Birth'
+            .row
+              .col-md-6
+                = f.input :password, label: 'Change Password', placeholder: 'Change Password' ,autocomplete: 'off'
+              .col-md-6
+                = f.input :password_confirmation, label: 'Confirm New Password', placeholder: 'Confirm' ,autocomplete: 'off'
+            .row
+              .col-md-12
+                = f.input :current_password, label: 'Enter your Current Password', placeholder: 'Enter current password to save your changes', autocomplete: 'off'
+          .form-actions.text-center.extramargin
+            = f.button :submit, 'Update Profile', class: 'btn btn-success'
+            = link_to 'Cancel', root_path ,class: 'btn btn-warning'
+.registration-form
+  .col-md-12
+    .header
+      .heading.text-center.text-uppercase
+        %h3 Delete your Profile
+        %p Not Happy ?
+      %br/
+      .form-actions.text-center.extramargin
+        = link_to 'Delete Account', registration_path(resource_name), data: { confirm: "Are you sure?" }, class: 'btn btn-danger', method: :delete
