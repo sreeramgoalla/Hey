@@ -27,7 +27,7 @@ gem 'haml'
 #If you'd like to replace Rails's Erb-based generators with Haml, add haml-rails to your Gemfile as well.
 gem "haml-rails", "~> 0.9"
 # Postgresql Gem
-gem 'pg', '~> 0.18.4'
+gem 'pg', '~> 0.18.4', group: :production
 # Selenium-webdriver Gem
 gem 'selenium-webdriver', '~> 3.2', '>= 3.2.1'
 # Selenium chromedriver-helper
@@ -62,6 +62,8 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
+  gem 'sqlite3', group: :development
+  
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
