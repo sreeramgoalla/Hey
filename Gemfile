@@ -49,7 +49,7 @@ gem 'country_select'
 # This gem provides a simple and extremely flexible way to upload files from Ruby applications
 gem 'carrierwave', '~> 1.0'
 # Bootstrap 3 Gem
-gem 'bootstrap-sass', '~> 3.3.6'
+gem "bootstrap-sass", ">= 3.4.1"
 # bootstrap3-datetimepicker-rails
 gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
