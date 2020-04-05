@@ -20,6 +20,7 @@
       .navbar-collapse
         - if user_signed_in?
           %ul.nav.navbar-nav.navbar-right
+            %li= link_to 'New Tweet', new_article_path, class: 'btn btn-md btn-success'
             %li= link_to 'My Profile', edit_user_registration_path
             %li= link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }
         - else
