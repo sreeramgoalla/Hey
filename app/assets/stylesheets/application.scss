@@ -84,30 +84,29 @@
 }
 
 .navbar-collapse {
-  padding: 10px 40px 0 0;
+  padding: 10px 10px 0 0;
 }
 
 ul {
   padding: 20px;
-  color: grey;
+  color: white;
 }
 
 ul:hover {
 
 }
 
-a.navbar-brand:hover {
-  color: grey;
-}
-
 .nav a {
-  color: grey;
+  color: white;
 }
 
 a:hover {
   color: black;
 }
 
+a.navbar-brand:hover {
+ color: black; 
+}
 .banner {
   background-color: #00BF88;
   color: #fff;
