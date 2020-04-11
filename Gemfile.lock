@@ -355,7 +355,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass (~> 3.4.1)
+  bootstrap-sass (>= 3.4.1)
   bootstrap3-datetimepicker-rails (~> 4.17.47)
   byebug
   carrierwave (~> 1.0)
