@@ -2,11 +2,11 @@
   .row
     .col-md-12.text-center
       %br/
-      %h3 Create a new Tweet
+      %h3 Create a new Post
       %br
-        .widget
+        .text-area
           = render 'form'
   .row.text-center
     .col-md-12
-      = link_to 'Show all Tweets', articles_path, class: 'btn btn-bg btn-primary'
+      = link_to 'Show all Reviews', articles_path, class: 'btn btn-bg btn-primary'
       = link_to 'Home', welcome_hey_path, class: 'btn btn-bg btn-warning'

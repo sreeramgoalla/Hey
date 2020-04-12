@@ -2,18 +2,18 @@
   .row.text-center
     .col-md-12
       %br/
-      %h4 Displaying your Tweet
+      %h3 Displaying your Review
       %br/
-  .row.text-center
+  .row
     .col-md-12
-      .widget
-        .row.text-center
-          .col-md-12
-            = @article.article_title
-        %br/
-        .row.text-center
-          .col-md-12
-            = @article.article_text
+      .row.text-center
+        .col-md-12
+          = @article.article_title
+      %br/
+      .row.text-center
+        .col-md-12
+          = @article.article_text
+      %br/
   .row.text-center
     .col-md-12
       %p
@@ -29,5 +29,5 @@
   .row
     .col-md-12.text-center
       = link_to 'Edit', edit_article_path(@article), class: 'btn btn-bg btn-danger'
-      = link_to 'Show all Tweets', articles_path, class: 'btn btn-bg btn-primary'
+      = link_to 'Show all Reviews', articles_path, class: 'btn btn-bg btn-primary'
       = link_to 'Home', welcome_hey_path, class: 'btn btn-bg btn-warning'
