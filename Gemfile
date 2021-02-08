@@ -47,7 +47,7 @@ gem 'simple_form'
 # For selecting countries using Simple Forms
 gem 'country_select'
 # This gem provides a simple and extremely flexible way to upload files from Ruby applications
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 # Bootstrap 3 Gem
 gem "bootstrap-sass", ">= 3.4.1"
 # bootstrap3-datetimepicker-rails
